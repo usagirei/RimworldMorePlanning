@@ -6,7 +6,6 @@ using HugsLib;
 using HugsLib.Settings;
 using HugsLib.Utils;
 using MorePlanning.Designators;
-using MorePlanning.Legacy;
 using MorePlanning.Plan;
 using MorePlanning.Settings;
 using UnityEngine;
@@ -27,8 +26,6 @@ namespace MorePlanning
         public int SelectedColor = 0;
 
         private static List<PlanDesignationDef> _planDesDefs = new List<PlanDesignationDef>();
-
-        public WorldSettings WorldSettings;
 
         public ModSettings ModSettings;
 
@@ -113,12 +110,6 @@ namespace MorePlanning
 
         public override void WorldLoaded()
         {
-            WorldSettings = UtilityWorldObjectManager.GetUtilityWorldObject<WorldSettings>();
-            
-            // Fix compatibilities with older saves
-            UpdateLegacy.Update();
-
-            VisibilityDesignator.PlanningVisibility = WorldSettings.PlanningVisibility;
             OpacityDesignator.Opacity = ModSettings.PlanOpacity;
         }
 

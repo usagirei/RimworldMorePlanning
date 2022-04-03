@@ -4,6 +4,7 @@ using MorePlanning.Plan;
 using UnityEngine;
 using Verse;
 using Resources = MorePlanning.Common.Resources;
+using MorePlanning.Settings;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable UnusedMember.Global
@@ -23,7 +24,7 @@ namespace MorePlanning.Patches
                 return true;
             }
 
-            if (VisibilityDesignator.PlanningVisibility == false)
+            if (MorePlanningGameComp.PlanningVisibility == false)
             {
                 return false;
             }
