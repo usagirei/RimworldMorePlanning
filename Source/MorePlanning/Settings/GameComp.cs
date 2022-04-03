@@ -17,7 +17,25 @@ namespace MorePlanning.Settings
 
         public static bool PlanningVisibility
         {
-            get => Current.Game.GetComponent<MorePlanningGameComp>().planningVisibility;
+            get
+            {
+                if (Current.Game.GetComponent<MorePlanningGameComp>().planningVisibility)
+                    return true;
+
+                if (Find.DesignatorManager.SelectedDesignator is Designator des &&
+                    (des is Designator_Build ||
+                    des is Designator_Claim ||
+                    des is Designator_Deconstruct ||
+                    des is Designator_Install ||
+                    des is Designator_Plan ||
+                    des is Designator_SmoothSurface ||
+                    des is Designator_Uninstall ||
+                    des is BaseDesignator))
+                {
+                    return true;
+                }
+                return false;
+            }
             set
             {
                 Current.Game.GetComponent<MorePlanningGameComp>().planningVisibility = value;
