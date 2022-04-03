@@ -98,7 +98,6 @@
     <Compile Include="Designators\PasteDesignator.cs" />
     <Compile Include="Designators\RemoveDesignator.cs" />
     <Compile Include="Dialogs\ColorSelectorDialog.cs" />
-    <Compile Include="Legacy\UpdateLegacy.cs" />
     <Compile Include="MorePlanningMod.cs" />
     <Compile Include="Common\AdaptableColor.cs" />
     <Compile Include="Patches\MultiplayerCompatibility.cs" />
