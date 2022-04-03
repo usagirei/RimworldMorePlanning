@@ -103,6 +103,7 @@
     <Compile Include="Patches\MultiplayerCompatibility.cs" />
     <Compile Include="Patches\DesignationPlanningDraw.cs" />
     <Compile Include="Patches\DesignationPlanningExposeData.cs" />
+    <Compile Include="Settings\GameComp.cs" />
     <Compile Include="Utility\ColorExtensions.cs" />
     <Compile Include="Plan\PlanDesignation.cs" />
     <Compile Include="Plan\PlanColorManager.cs" />
@@ -112,7 +113,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Common\Resources.cs" />
     <Compile Include="Settings\ModSettings.cs" />
-    <Compile Include="Settings\WorldSettings.cs" />
     <Compile Include="Utility\MenuUtility.cs" />
     <Compile Include="Utility\MapUtility.cs" />
   </ItemGroup>

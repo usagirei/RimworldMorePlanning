@@ -20,8 +20,7 @@ namespace MorePlanning.Designators
         public override void SelectedUpdate()
         {
             GenUI.RenderMouseoverBracket();
-            GenDraw.DrawNoBuildEdgeLines();
-            VisibilityDesignator.PlanningVisibility = true;
+            GenDraw.DrawNoBuildEdgeLines(); //from edge of map
         }
 
         public override void RenderHighlight(List<IntVec3> dragCells)

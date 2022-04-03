@@ -27,8 +27,6 @@ namespace MorePlanning
 
         private static List<PlanDesignationDef> _planDesDefs = new List<PlanDesignationDef>();
 
-        public WorldSettings WorldSettings;
-
         public ModSettings ModSettings;
 
         public static List<PlanDesignationDef> PlanDesDefs
@@ -112,9 +110,6 @@ namespace MorePlanning
 
         public override void WorldLoaded()
         {
-            WorldSettings = UtilityWorldObjectManager.GetUtilityWorldObject<WorldSettings>();
-
-            VisibilityDesignator.PlanningVisibility = WorldSettings.PlanningVisibility;
             OpacityDesignator.Opacity = ModSettings.PlanOpacity;
         }
 
